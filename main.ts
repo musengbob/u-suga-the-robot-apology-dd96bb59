@@ -28,7 +28,7 @@ for (const line of LINES) {
   if (line.trim() === "") {
     throw new Error("Each line must contain non-whitespace text.");
   }
-  if (line.includes("\n") || line.includes("\r")) {
+  if (line.includes("\n") || line.includes("\r") || line.includes("\t")) {
     throw new Error("Each line must be a single line.");
   }
   if (!/[A-Za-z]/.test(line)) {
